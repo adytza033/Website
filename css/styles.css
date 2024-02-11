@@ -5,19 +5,53 @@
 
 body {
   background: #fcc;
-} 
+}
 
 
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  top: 1;
+  height: auto;
+  transform: translateX(100%);
+  transition: 0.7s;
+}
+
+nav.open {
+  transform: translateX(0);
+  padding: 5px;
+  transition: 0.7s;
+}
+
+#menuToggler {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding-right: 10px;
+}
+
+section {
+  transition: 0.5s;
+  transition-delay: 0.3s;
+}
+
+section.open {
+  padding-top: 90px;
+  transition: 0.5s;
+}
 
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
+
   body {
     background: #cfc;
-  } 
+  }
 }
 
 
@@ -30,5 +64,5 @@ body {
 
   body {
     background: #ccf;
-  } 
+  }
 }
