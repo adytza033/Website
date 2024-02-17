@@ -1,5 +1,12 @@
 /* MOBILE AND GLOBAL STYLES */
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+}
+
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
