@@ -2,57 +2,17 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
+  background: rgb(72, 72, 72);
 }
 
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
-body {
-  background: rgb(72, 72, 72);
-}
 
-header {
-  background-color: black;
-  color: beige;
-}
-
-nav {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  width: 100%;
-  top: 1;
-  height: auto;
-  transform: translateX(100%);
-  transition: 0.7s;
-}
-
-nav.open {
-  transform: translateX(0);
-  padding: 5px;
-  transition: 0.7s;
-}
-
-#menuToggler {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  padding-right: 10px;
-}
-
-section {
-  transition: 0.5s;
-  transition-delay: 0.3s;
-}
-
-section.open {
-  padding-top: 90px;
-  transition: 0.5s;
-}
 
 /* TABLET STYLES */
 
@@ -64,18 +24,7 @@ section.open {
     background: rgb(212, 230, 251);
   }
 
-  header {
-    background-color: black;
-    color: beige;
-  }
 
-  nav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-  }
 
 }
 
@@ -92,8 +41,57 @@ section.open {
   }
 
   header {
-
     background-color: black;
     color: beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
   }
+
+  #siteName {
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 900;
+
+  }
+
+  #navbar a {
+    position: relative;
+    font-size: 16px;
+    color: beige;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 50px;
+
+  }
+
+  #navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: beige;
+    transition: .3s;
+
+  }
+
+  #navbar a:hover::before {
+    width: 100%;
+  }
+
+  body {
+    margin-top: 6em;
+    padding: 1em;
+  }
+
+
+
 }
