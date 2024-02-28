@@ -22,22 +22,8 @@ body {
 
   body {
     background: rgb(212, 230, 251);
-  }
-
-
-
-}
-
-
-
-/* DESKTOP STYLES */
-
-@media screen and (min-width: 1000px) {
-
-  /* applies to screens wider than 999px */
-
-  body {
-    background: rgb(212, 230, 251);
+    margin-top: 7em;
+    padding: 1em;
   }
 
   header {
@@ -47,18 +33,17 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 50;
   }
 
   #siteName {
-    font-size: 24px;
+    font-size: 16px;
     text-decoration: none;
     font-weight: 900;
-
   }
 
   #navbar a {
@@ -87,11 +72,99 @@ body {
     width: 100%;
   }
 
+
+
+}
+
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 1000px) {
+
+  /* applies to screens wider than 999px */
+
   body {
+    background-color: #f5f5f5;
+    color: #333333;
     margin-top: 6em;
     padding: 1em;
   }
 
+  .black {
+    color: black;
+    padding-bottom: 10px;
+  }
 
+  header {
+    background-color: black;
+    color: beige;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    font-size: 0.8mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+
+  #siteName {
+    font-size: 18px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: row;
+
+  }
+
+  #siteName h2:last-child {
+    margin-left: 10px;
+  }
+
+
+  #navbar a {
+    position: relative;
+    font-size: 16px;
+    color: beige;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 50px;
+
+  }
+
+  #navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: beige;
+    transition: .3s;
+
+  }
+
+  #navbar a:hover::before {
+    width: 100%;
+  }
+
+  #navbar a#aboutUs {
+    background-color: #5badf0;
+    color: black;
+    padding: 2mm;
+    border-radius: 3px;
+  }
+
+  #navbar a#aboutUs:hover {
+    background-color: #333333;
+    color: #f5f5f5;
+    transition: 1.5s;
+  }
+
+  #navbar a#aboutUs:hover::before {
+    width: 0%;
+  }
 
 }
