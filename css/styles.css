@@ -184,17 +184,20 @@ body {
     grid-template-rows: auto 1fr;
     grid-template-columns: auto auto;
     align-items: center;
+    column-gap: 30px;
   }
 
   .videoCard-title {
-    padding-left: 40px;
     grid-column: 1/-1;
     grid-row: 1;
+
+
   }
 
   #videoCard img {
     width: 600px;
   }
+
 
   .videoCard-specifications {
     padding-left: 2em;
