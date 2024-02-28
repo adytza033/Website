@@ -129,6 +129,7 @@ body {
 
   #siteName h2:last-child {
     margin-left: 10px;
+
   }
 
 
@@ -188,25 +189,23 @@ body {
   .videoCard-title {
     grid-column: 1/-1;
     grid-row: 1;
-
-
+    margin: -15px;
   }
 
   #videoCard img {
     width: 600px;
-  }
 
-
-  .videoCard-specifications {
-    padding-left: 2em;
   }
 
   .pros-cons-container {
 
     display: flex;
-    justify-content: end;
+    justify-content: center;
     margin-bottom: 20px;
     align-self: center;
+    width: 800px;
+    padding-left: 15%;
+    min-width: 70%;
 
 
   }
@@ -226,6 +225,11 @@ body {
   .cons ul {
     padding: 0;
     margin: 0;
+  }
+
+  #videoCard-text {
+    position: absolute;
+    max-width: 800px;
   }
 
 }
