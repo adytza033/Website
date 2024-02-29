@@ -229,7 +229,36 @@ body {
 
   #videoCard-text {
     position: absolute;
-    max-width: 800px;
+    max-width: 880px;
+  }
+
+  .buy-videocard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    padding-top: 100px;
+  }
+
+  .button-buy-videocard {
+    background-color: #cc311e;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: background-color 0.5s;
+
+  }
+
+  .button-buy-videocard:hover {
+    background-color: #347911;
+  }
+
+  .amazon-logo img {
+    height: 120px;
+    padding-top: 10px;
   }
 
 }
