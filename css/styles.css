@@ -82,7 +82,7 @@ body {
   /* applies to screens wider than 999px */
 
   body {
-    background-color: #e1e9f8;
+    background-color: #e3ebf8;
     color: #333333;
     display: flex;
     justify-content: center;
@@ -176,8 +176,6 @@ body {
     width: 0%;
   }
 
-
-
   #videoCard {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -192,13 +190,12 @@ body {
     margin: -15px;
   }
 
-  #videoCard img {
+  .videoCard img {
     width: 600px;
-
   }
 
-  .pros-cons-container {
 
+  .pros-cons-container {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
@@ -206,8 +203,6 @@ body {
     width: 800px;
     padding-left: 15%;
     min-width: 70%;
-
-
   }
 
   .pros,
