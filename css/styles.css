@@ -2,11 +2,152 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
-  background: rgb(72, 72, 72);
+  background: #e6eef9;
+}
+
+header {
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.siteName h2 {
+  color: beige;
+  font-size: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.siteName h2:last-of-type {
+  margin-top: -10px;
+  margin-left: 35px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: auto;
+  height: 100%;
+  transform: translateX(100%);
+  transition: 0.5s;
+  background: black;
+  width: 100%;
+  text-align: center;
+
+
+}
+
+nav.open {
+  display: flex;
+  position: fixed;
+  transform: translateX(0);
+  justify-content: center;
+  background: black;
+  height: 100%;
+}
+
+#menuToggler {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 15px;
+  padding-right: 30px;
+  color: white;
+  font-size: 40px;
+}
+
+nav ul {
+  margin-right: 20px;
+}
+
+nav ul li {
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: beige;
+  font-size: 17px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: beige;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover::after,
+a.active::after {
+  width: 100%;
+}
+
+a.active,
+a:hover {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+nav a#aboutUs {
+  background-color: #5badf0;
+  color: black;
+  padding: 2mm;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+nav a#aboutUs:hover {
+  background-color: #333333;
+  color: #f5f5f5;
+  transition: background-color 1.5s, color 1.5s;
+}
+
+nav a#aboutUs::after {
+  content: none;
+}
+
+nav a#aboutUs:hover::before {
+  width: 0;
+}
+
+#menu {
+  font-size: 30px;
+  color: white;
+  margin-right: 40px;
+  line-height: 80px;
+}
+
+main {
+  padding: 85px 15px;
+}
+
+img {
+  height: 100px;
 }
 
 /* applies to screens smaller than 500px (first breakpoint) */
@@ -18,59 +159,16 @@ body {
 
 @media screen and (min-width: 500px) {
 
-  /* applies to screens wider than 499px */
-
-  body {
-    background: rgb(212, 230, 251);
-    margin-top: 7em;
-    padding: 1em;
+  #menuToggler {
+    display: none;
   }
 
-  header {
-    background-color: black;
-    color: beige;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
+  nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 50;
+    flex-direction: row;
+    transform: translateX(0%)
   }
 
-  #siteName {
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: 900;
-  }
-
-  #navbar a {
-    position: relative;
-    font-size: 16px;
-    color: beige;
-    font-weight: 600;
-    text-decoration: none;
-    margin-right: 50px;
-
-  }
-
-  #navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: beige;
-    transition: .3s;
-
-  }
-
-  #navbar a:hover::before {
-    width: 100%;
-  }
 
 }
 
@@ -80,236 +178,37 @@ body {
 @media screen and (min-width: 1000px) {
 
   /* applies to screens wider than 999px */
-
-  body {
-    background-color: #e6eef9;
-    color: #333333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    width: 100%;
-    margin: auto;
-  }
-
-  .black {
-    color: black;
-  }
-
-  #pageTitle {
-    top: 50%;
-    margin-top: 4em;
-    transform: translateY(-50%);
-    text-align: center;
-  }
-
-  header {
-    background-color: black;
-    color: beige;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px;
-    height: 50px;
-    font-size: 0.8mm;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-
-  #siteName {
-    font-size: 18px;
-    font-weight: 900;
-    display: flex;
-    flex-direction: row;
-
-  }
-
-  #siteName h2:last-child {
-    margin-left: 10px;
-
-  }
-
-
-  #navbar a {
-    position: relative;
+  nav ul li a {
     font-size: 16px;
-    color: beige;
-    font-weight: 600;
-    text-decoration: none;
-    margin-right: 50px;
 
   }
 
-  #navbar a::before {
-    content: '';
-    position: absolute;
-    top: 100%;
+  #menu {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
     left: 0;
-    width: 0;
-    height: 2px;
-    background: beige;
-    transition: .3s;
-
-  }
-
-  #navbar a:hover::before {
-    width: 100%;
-  }
-
-  #navbar a#aboutUs {
-    background-color: #5badf0;
-    color: black;
-    padding: 2mm;
-    border-radius: 3px;
-  }
-
-  #navbar a#aboutUs:hover {
-    background-color: #333333;
-    color: #f5f5f5;
-    transition: 1.5s;
-  }
-
-  #navbar a#aboutUs:hover::before {
-    width: 0%;
-  }
-
-  #videoCard {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: auto auto;
-    align-items: center;
-    column-gap: 30px;
-  }
-
-  .videoCard-title {
-    grid-column: 1/-1;
-    grid-row: 1;
-    margin: -15px;
-  }
-
-  .videoCard img {
-    width: 600px;
-  }
-
-  .pros-cons-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    align-self: center;
-    width: 800px;
-    padding-left: 5%;
-    min-width: 70%;
-    gap: 20%;
-  }
-
-  .pros,
-  .cons {
-    width: 80%;
-    list-style: none;
-  }
-
-  .pros h2,
-  .cons h2 {
-    margin-bottom: 5px;
-  }
-
-  .pros ul,
-  .cons ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  #videoCard-text {
-    position: absolute;
-    max-width: 880px;
-  }
-
-  .buy-videocard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 150px;
-    padding-top: 100px;
-  }
-
-  .button-buy-videocard {
-    background-color: #cc311e;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 4px;
-    margin-right: 10px;
-    transition: background-color 0.5s;
-
-  }
-
-  .button-buy-videocard:hover {
-    background-color: #347911;
-  }
-
-  .amazon-logo img {
-    height: 120px;
-    padding-top: 10px
-  }
-
-  .otherVideocardsTitle {
     text-align: center;
-    margin: 0 auto;
-    padding-bottom: 30px;
   }
 
-  .extraVideocards {
-    display: contents;
-    align-items: center;
-    justify-content: center;
+  nav ul li {
+    display: block;
   }
 
-  .extraVideocards span {
-    display: inline-block;
-    background-color: #DC191B;
-    color: white;
-    padding: 1px 75px;
-    font-size: 15px;
-    text-align: justify;
+  nav ul li a {
+    font-size: 20px;
 
   }
 
-  .extraVideocards .red-line {
-    width: 100%;
-    border: none;
-    height: 5px;
-    background-color: #DC191B;
-    margin-top: -3px;
+  a:hover,
+  a.active {
+    background-color: none;
+    color: #0082e6;
   }
-
-  .theVideoCards {
-    position: absolute;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    align-items: center;
-    column-gap: 30px;
-    width: 850px;
-    align-items: start;
-  }
-
-  .theVideoCards img {
-    height: 140px;
-  }
-
-  .theVideoCards a {
-    color: red;
-    transition: 0.5s;
-  }
-
-  .theVideoCards a:hover {
-    background-color: #DC191B;
-    color: #f5f5f5;
-    padding: 5px;
-    border-radius: 3px;
-  }
-
 }
