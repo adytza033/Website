@@ -58,8 +58,7 @@ nav a {
   justify-content: center;
   color: beige;
   font-size: 20px;
-  line-height: 60px;
-
+  margin-bottom: 40px;
 }
 
 nav.open {
@@ -70,7 +69,6 @@ nav.open {
   background: white;
   color: black;
   font-weight: bold;
-  line-height: 40px;
   border-radius: 10px;
 }
 
@@ -124,24 +122,23 @@ img {
 
   nav {
     display: flex;
-    height: auto;
     width: auto;
+    top: 0;
     right: 0;
-    transform: translateX(0%)
-  }
+    height: 35px;
+    padding-top: 30px;
 
-  header {
-    display: flex;
   }
-
 
   nav ul {
     display: flex;
-    justify-content: center;
-    color: beige;
-    font-size: 20px;
-    line-height: 60px;
 
+  }
+
+  nav a {
+    text-decoration: none;
+    margin-right: 20px;
+    color: white;
   }
 
   main {
