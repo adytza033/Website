@@ -96,11 +96,13 @@ img {
 
 .pros h2,
 .specifications,
-.cons h2 {
+.cons h2,
+.extraVideocards h1 {
   display: flex;
   justify-content: center;
   padding: 10px;
   font-size: 22px;
+  text-align: center;
 }
 
 .pros ul,
@@ -110,6 +112,41 @@ img {
 
 #videoCard-text {
   padding-top: 40px;
+}
+
+.buy-videocard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+
+.buy-videocard-container a {
+  padding: 10px 10px;
+  background: green;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.amazon-logo {
+  width: 100px;
+  margin: -35px 0;
+}
+
+.buy-videocard-container span {
+  display: flex;
+  justify-self: center;
+  text-align: center;
+}
+
+.extraVideocards span {
+  display: flex;
+  justify-content: center;
+}
+
+.RX-7900 h4 {
+  padding-top: 20px;
 }
 
 
