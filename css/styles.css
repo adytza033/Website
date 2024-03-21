@@ -58,7 +58,7 @@ nav {
 
 nav a {
   color: beige;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 30px;
 }
 
@@ -89,6 +89,30 @@ img {
 }
 
 
+.specifications {
+  color: red;
+  font-weight: bold;
+}
+
+.pros h2,
+.specifications,
+.cons h2 {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 22px;
+}
+
+.pros ul,
+.cons ul {
+  list-style-type: none;
+}
+
+#videoCard-text {
+  padding-top: 40px;
+}
+
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
@@ -107,7 +131,7 @@ img {
   }
 
   nav a {
-    font-size: 26px;
+    font-size: 22px;
     margin: 30px 0 30px 0;
   }
 }
@@ -138,7 +162,8 @@ img {
   }
 
   nav a {
-    margin: 5px;
+    margin: 5px 10px;
+    font-size: 18px;
   }
 
 
