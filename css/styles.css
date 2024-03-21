@@ -145,10 +145,23 @@ img {
   justify-content: center;
 }
 
-.RX-7900 h4 {
-  padding-top: 20px;
+.RX-7900 {
+  padding: 20px 0;
 }
 
+#RX-7900-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+#RX-7900-container a {
+  padding-right: 20px;
+  color: blue;
+  font-weight: bold;
+
+}
 
 /* TABLET STYLES */
 
