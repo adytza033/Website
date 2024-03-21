@@ -149,18 +149,22 @@ img {
   padding: 20px 0;
 }
 
-#RX-7900-container {
+#RX-7900-container,
+.GeForce-4070-container,
+.RTX-3090-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 0;
 }
 
-#RX-7900-container a {
+#RX-7900-container a,
+.GeForce-4070-container a,
+.RTX-3090-container a {
   padding-right: 20px;
-  color: blue;
+  color: #DC191B;
   font-weight: bold;
-
+  text-decoration: underline;
 }
 
 /* TABLET STYLES */
