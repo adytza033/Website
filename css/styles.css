@@ -100,7 +100,7 @@ img {
 .extraVideocards h1 {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 0;
   font-size: 22px;
   text-align: center;
 }
@@ -191,6 +191,36 @@ img {
   nav a {
     font-size: 22px;
     margin: 30px 0 30px 0;
+  }
+
+  .videoCard-specifications {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: auto 1fr;
+    margin-bottom: 20px;
+  }
+
+  .specifications {
+    justify-content: start;
+    grid-column: 1/3;
+  }
+
+  .pros-cons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+  }
+
+  .pros h2,
+  .cons h2 {
+    justify-content: start;
+    margin-left: 100px;
+  }
+
+  img {
+    width: 80%;
+    max-width: 650px;
   }
 }
 
