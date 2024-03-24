@@ -195,14 +195,16 @@ img {
 
   .videoCard-specifications {
     display: grid;
-    grid-template-columns: 230px 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     margin-bottom: 20px;
+    max-width: 730px;
   }
 
   .specifications {
-    justify-content: start;
+    margin-right: 28%;
     grid-column: 1/3;
+    padding-bottom: 20px;
   }
 
   .pros-cons-container {
@@ -210,6 +212,7 @@ img {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     gap: 20px;
+    max-width: 730px;
   }
 
   .pros h2,
