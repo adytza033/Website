@@ -156,6 +156,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px 0;
+  font-weight: bold;
 }
 
 #RX-7900-container a,
@@ -174,6 +175,11 @@ img {
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
+
+  img {
+    width: 80%;
+    max-width: 650px;
+  }
 
   .siteName {
     display: flex;
@@ -221,10 +227,20 @@ img {
     margin-left: 100px;
   }
 
-  img {
-    width: 80%;
-    max-width: 650px;
+  .buy-videocard-container {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
   }
+
+  #RX-7900-container,
+  .GeForce-4070-container,
+  .RTX-3090-container {
+    justify-content: start;
+    gap: 40px;
+    margin: 5px 15px;
+  }
+
 }
 
 
