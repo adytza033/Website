@@ -257,7 +257,6 @@ img {
     flex-direction: row;
   }
 
-
   nav {
     display: flex;
     flex-direction: row;
@@ -273,9 +272,64 @@ img {
     font-size: 18px;
   }
 
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 10%;
+  }
 
-  img {
+  .theVideoCards {
+    display: grid;
+    grid-template-rows: 3;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .theVideoCards h4 {
+    text-align: center;
+
+  }
+
+
+
+  .videoCardImg img {
+    display: flex;
+    justify-content: center;
     width: 600px;
   }
 
+  #videoCard {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+
+
+  .videoCard-title {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .videoCard-specifications {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-right: 30px;
+  }
+
+  .videoCard-specifications p {
+    margin-top: 7px;
+  }
+
+  .extraVideocardsImg {
+    width: 300px;
+  }
+
+  .price {
+    color: red;
+  }
 }
