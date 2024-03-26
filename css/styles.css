@@ -253,6 +253,10 @@ img {
     margin: 5px 15px;
   }
 
+  .theVideoCards p {
+    margin: 3px;
+  }
+
 }
 
 
@@ -322,10 +326,6 @@ img {
     margin-bottom: 7px;
   }
 
-  .extraVideocardsImg {
-    width: 300px;
-  }
-
   .price {
     color: red;
   }
@@ -350,9 +350,21 @@ img {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 30px;
   }
 
-  .theVideoCards div h4 {}
+  .theVideoCards img {
+    width: 90%;
+  }
+
+  .theVideoCards section {
+    flex-direction: column;
+    margin: 0;
+    gap: 0;
+  }
+
+  .theVideoCards p {
+    margin: 10px 0;
+  }
 
 }
