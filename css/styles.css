@@ -166,33 +166,23 @@ img {
   margin-top: -3px;
 }
 
-
-.RX-7900 {
-  padding: 20px 0;
+.theVideoCards p {
+  margin: 7px 0;
 }
 
-#RX-7900-container,
-.GeForce-4070-container,
-.RTX-3090-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 0;
+.theVideoCards div {
+  padding: 15px 0;
+}
+
+.theVideoCards section {
   font-weight: bold;
 }
 
-#RX-7900-container a,
-.GeForce-4070-container a,
-.RTX-3090-container a {
-  padding-right: 20px;
+.theVideoCards section a {
   color: #DC191B;
-  font-weight: bold;
   text-decoration: underline;
 }
 
-.RTX-3090 {
-  padding: 20px 0;
-}
 
 /* TABLET STYLES */
 
@@ -255,9 +245,9 @@ img {
     gap: 30px;
   }
 
-  #RX-7900-container,
-  .GeForce-4070-container,
-  .RTX-3090-container {
+  .theVideoCards section {
+    display: flex;
+    flex-direction: row;
     justify-content: start;
     gap: 40px;
     margin: 5px 15px;
@@ -302,18 +292,6 @@ img {
     padding: 70px 10%;
   }
 
-  .theVideoCards {
-    display: grid;
-    grid-template-rows: 3;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
-    justify-content: center;
-  }
-
-  .theVideoCards h4 {
-    text-align: center;
-  }
-
   .videoCardImg img {
     display: flex;
     justify-content: center;
@@ -324,6 +302,7 @@ img {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+
   }
 
   .videoCard-title {
@@ -367,5 +346,13 @@ img {
     display: contents;
   }
 
+  .theVideoCards {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+
+  .theVideoCards div h4 {}
 
 }
