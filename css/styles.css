@@ -152,6 +152,10 @@ img {
   text-align: center;
 }
 
+.extraVideocards h2 {
+  margin-bottom: 30px;
+}
+
 .extraVideocards span {
   display: inline-block;
   background-color: #DC191B;
@@ -174,11 +178,11 @@ img {
   padding: 15px 0;
 }
 
-.theVideoCards section {
+.videoCardAmazon {
   font-weight: bold;
 }
 
-.theVideoCards section a {
+.videoCardAmazon a {
   color: #DC191B;
   text-decoration: underline;
 }
@@ -245,7 +249,7 @@ img {
     gap: 30px;
   }
 
-  .theVideoCards section {
+  .videoCardAmazon {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -394,7 +398,7 @@ img {
   }
 
 
-  .theVideoCards section {
+  .videoCardAmazon {
     display: inline-block;
     margin: 0;
     gap: 0;
@@ -415,7 +419,7 @@ img {
     margin: 10px 0;
   }
 
-  .theVideoCards section p {
+  .videoCardAmazon p {
     margin: 0 0 10px;
   }
 
