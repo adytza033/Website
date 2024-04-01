@@ -205,7 +205,6 @@ img {
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   animation: moveAround 60s infinite linear;
   box-shadow: inset 0 0 20px 10px #b5d8e9;
-  opacity: 50%;
   z-index: -1;
 }
 
@@ -214,18 +213,22 @@ img {
   0%,
   100% {
     transform: translate(var(--x0), var(--y0));
+    opacity: 0;
   }
 
   25% {
     transform: translate(var(--x25), var(--y25));
+    opacity: 50%;
   }
 
   50% {
     transform: translate(var(--x50), var(--y50));
+    opacity: 75%;
   }
 
   75% {
     transform: translate(var(--x75), var(--y75));
+    opacity: 100%;
   }
 }
 
@@ -249,29 +252,41 @@ img {
 
 .content {
   padding: 20px;
+
 }
 
 .slideshow-container {
   position: relative;
   max-width: 650px;
-  height: 25%;
+}
+
+#apple-vision-pro h2 {
+  display: flex;
   justify-content: center;
-  align-items: center;
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#apple-vision-pro>p {
+  color: #666;
+  padding-left: 15px;
 }
 
 .mySlides img {
   width: 100%;
+  border-radius: 80px;
 }
 
 .prev,
 .next {
   position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  color: black;
-  font-weight: bolder;
-  font-size: 26px;
+  top: 45%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  padding: 2%;
+  margin: 0 10px;
+  border-radius: 0 3px 3px 0;
   user-select: none;
 }
 
@@ -285,9 +300,31 @@ img {
 
 .prev:hover,
 .next:hover {
-  background-color: white;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.8);
 }
+
+#apple-content {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+#apple-content p {
+  padding: 5px;
+  line-height: 1.5;
+  color: #333;
+}
+
+#apple-content a {
+  color: #0073e6;
+}
+
+#apple-content a:hover {
+  text-decoration: underline;
+}
+
+
 
 @media screen and (min-width: 500px) {
 
