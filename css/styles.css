@@ -251,8 +251,7 @@ img {
 }
 
 .content {
-  padding: 20px;
-
+  padding: 0 20px;
 }
 
 .slideshow-container {
@@ -262,7 +261,7 @@ img {
 
 .content h2 {
   text-align: center;
-  padding: 10px 0;
+  padding: 25px 0;
   font-size: 22px;
 }
 
@@ -271,7 +270,8 @@ img {
   padding-left: 15px;
 }
 
-.mySlides img {
+.mySlides img,
+#AI img {
   width: 100%;
   border-radius: 80px;
 }
