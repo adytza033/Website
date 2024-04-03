@@ -260,9 +260,8 @@ img {
   max-width: 650px;
 }
 
-#apple-vision-pro h2 {
-  display: flex;
-  justify-content: center;
+.content h2 {
+  text-align: center;
   padding: 10px 0;
   font-size: 22px;
 }
@@ -303,14 +302,16 @@ img {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-#apple-content {
+#apple-content,
+#AI-content {
   background: #f9f9f9;
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-#apple-content p {
+#apple-content p,
+#AI-content p {
   padding: 5px;
   line-height: 1.5;
   color: #333;
@@ -322,6 +323,10 @@ img {
 
 #apple-content a:hover {
   text-decoration: underline;
+}
+
+#AI-content .subtitle {
+  font-weight: bold;
 }
 
 
