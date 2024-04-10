@@ -16,3 +16,8 @@ The `css/styles.css` file contains a basic starting template for a responsive pa
 ## js/scripts.js
 
 The `js/scripts.js` file contains a simple console.log statement to confirm that it is being executed.
+
+
+## websites used for content
+amazon.com for directing this website to the spesific videocard for the customer to buy
+kickstarter.com and (https://shiftrobotics.io/) for the moonwalkers shoes content

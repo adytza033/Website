@@ -333,6 +333,15 @@ img {
 }
 
 
+#moonwalkers img {
+  padding: 40px 0;
+
+  border-radius: 0;
+  height: 60vh;
+}
+
+
+
 /* mobile */
 
 .iphone img {
