@@ -28,31 +28,54 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-let slideIndex = 1;
+let slideIndexApple = 1;
+let slideIndexMoonwalkers = 1;
 
 document.addEventListener('DOMContentLoaded', () => {
-    showSlides(slideIndex);
+    showSlidesApple(slideIndexApple);
+    showSlidesMoonwalkers(slideIndexMoonwalkers);
 
-    document.querySelector('.prev').addEventListener('click', () => {
-        plusSlides(-1);
+    document.querySelector('#apple-vision-pro .prev').addEventListener('click', () => {
+        plusSlidesApple(-1);
+    });
+    document.querySelector('#apple-vision-pro .next').addEventListener('click', () => {
+        plusSlidesApple(1);
     });
 
-    document.querySelector('.next').addEventListener('click', () => {
-        plusSlides(1);
+    document.querySelector('#moonwalkers .prev').addEventListener('click', () => {
+        plusSlidesMoonwalkers(-1);
+    });
+    document.querySelector('#moonwalkers .next').addEventListener('click', () => {
+        plusSlidesMoonwalkers(1);
     });
 });
 
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlidesApple(n) {
+    showSlidesApple(slideIndexApple += n);
 }
 
-function showSlides(n) {
+function plusSlidesMoonwalkers(n) {
+    showSlidesMoonwalkers(slideIndexMoonwalkers += n);
+}
+
+function showSlidesApple(n) {
     let i;
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
+    let slides = document.querySelectorAll("#apple-vision-pro .mySlides");
+    if (n > slides.length) { slideIndexApple = 1 }
+    if (n < 1) { slideIndexApple = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slides[slideIndex - 1].style.display = "block";
+    slides[slideIndexApple - 1].style.display = "block";
+}
+
+function showSlidesMoonwalkers(n) {
+    let i;
+    let slides = document.querySelectorAll("#moonwalkers .mySlides");
+    if (n > slides.length) { slideIndexMoonwalkers = 1 }
+    if (n < 1) { slideIndexMoonwalkers = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndexMoonwalkers - 1].style.display = "block";
 }

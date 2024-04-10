@@ -265,7 +265,8 @@ img {
   font-size: 22px;
 }
 
-#apple-vision-pro>p {
+#apple-vision-pro>p,
+#moonwalkers>p {
   color: #666;
   padding-left: 15px;
 }
@@ -303,7 +304,8 @@ img {
 }
 
 #apple-content,
-#AI-content {
+#AI-content,
+#moonwalkers-content {
   background: #f9f9f9;
   border-radius: 8px;
   padding: 10px;
@@ -311,7 +313,8 @@ img {
 }
 
 #apple-content p,
-#AI-content p {
+#AI-content p,
+#moonwalkers-content p {
   padding: 5px;
   line-height: 1.5;
   color: #333;
@@ -330,7 +333,7 @@ img {
 }
 
 
-
+/* mobile */
 
 .iphone img {
   height: 40vh;
