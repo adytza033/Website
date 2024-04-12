@@ -24,7 +24,6 @@ header {
 
 .siteName h2 {
   color: beige;
-  font-size: 21px;
   padding: 5px 10px;
   font-weight: bold;
 }
@@ -83,7 +82,6 @@ main {
 #pageTitle {
   text-align: center;
   padding-bottom: 14px;
-  font-size: 22px;
 }
 
 img {
@@ -104,7 +102,6 @@ img {
   display: flex;
   justify-content: center;
   padding: 10px 0;
-  font-size: 22px;
   text-align: center;
 }
 
@@ -263,7 +260,6 @@ img {
 .content h2 {
   text-align: center;
   padding: 25px 0;
-  font-size: 22px;
 }
 
 #apple-vision-pro>p,
@@ -339,6 +335,7 @@ img {
   border-radius: 0;
   height: 60vh;
 }
+
 
 
 
@@ -440,7 +437,6 @@ img {
 
   .slideshow-container {
     max-width: 650px;
-
   }
 
 
@@ -642,6 +638,47 @@ img {
   }
 
   /*Entertaiment*/
+
+
+  .content {
+    max-width: 100%;
+  }
+
+
+  #apple-vision-pro h2 {
+    padding-bottom: 10px;
+  }
+
+
+  #apple-vision-pro,
+  #AI,
+  #moonwalkers {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #apple-vision-pro img {
+    width: 100%;
+    min-width: 270px;
+    height: auto;
+  }
+
+  .entertainment-subtitle {
+    grid-column: 1/ -1;
+  }
+
+  .entertainment-subtitle p {
+    text-align: center;
+  }
+
+  #apple-content {
+    grid-row: 2/-1;
+    max-width: 1200px;
+  }
+
 
 
 
