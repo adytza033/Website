@@ -660,7 +660,8 @@ img {
     padding: 20px;
   }
 
-  #apple-vision-pro img {
+  #apple-vision-pro img,
+  #AI img {
     width: 100%;
     min-width: 270px;
     height: auto;
@@ -674,12 +675,16 @@ img {
     text-align: center;
   }
 
-  #apple-content {
+  #apple-content,
+  #AI-content,
+  #moonwalkers-content {
     grid-row: 2/-1;
     max-width: 1200px;
   }
 
-
+  #moonwalkers .slideshow-container {
+    max-width: 400px;
+  }
 
 
 }
