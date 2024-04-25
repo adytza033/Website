@@ -651,8 +651,7 @@ img {
 
 
   #apple-vision-pro,
-  #AI,
-  #moonwalkers {
+  #AI {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -676,15 +675,27 @@ img {
   }
 
   #apple-content,
-  #AI-content,
-  #moonwalkers-content {
+  #AI-content {
     grid-row: 2/-1;
     max-width: 1200px;
   }
 
-  #moonwalkers .slideshow-container {
-    max-width: 400px;
+  #moonwalkers {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 100px;
+    padding: 20px;
   }
 
+  #moonwalkers .slideshow-container {
+    min-width: 100px;
+  }
 
+  #moonwalkers-content {
+    grid-row: 2/-1;
+    max-width: 1200px;
+
+
+  }
 }
