@@ -369,6 +369,51 @@ MOBILE PAGE*/
   margin-right: 30px;
 }
 
+.color-options p {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.color-choices {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.color-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.color-circle:hover {
+  opacity: 0.7;
+
+}
+
+#black-titanium {
+  background-color: black;
+}
+
+#blue-titanium {
+  background-color: blue;
+}
+
+#natural-titanium {
+  background-color: gray;
+}
+
+#white-titanium {
+  background-color: white;
+}
+
+.slideshow-container {
+  background-color: none;
+}
+
 
 
 @media screen and (min-width: 500px) {
