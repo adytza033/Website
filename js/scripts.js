@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showSlidesApple(slideIndexApple);
     showSlidesMoonwalkers(slideIndexMoonwalkers);
 
+
     document.querySelector('#apple-vision-pro .prev').addEventListener('click', () => {
         plusSlidesApple(-1);
     });
@@ -48,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#moonwalkers .next').addEventListener('click', () => {
         plusSlidesMoonwalkers(1);
     });
+
+
+
 });
 
 function plusSlidesApple(n) {
@@ -57,6 +61,7 @@ function plusSlidesApple(n) {
 function plusSlidesMoonwalkers(n) {
     showSlidesMoonwalkers(slideIndexMoonwalkers += n);
 }
+
 
 function showSlidesApple(n) {
     let i;
@@ -79,3 +84,4 @@ function showSlidesMoonwalkers(n) {
     }
     slides[slideIndexMoonwalkers - 1].style.display = "block";
 }
+

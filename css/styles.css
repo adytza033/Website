@@ -188,7 +188,8 @@ img {
 }
 
 
-/* ENTERTAIMENT PAGE */
+/* ENTERTAIMENT PAGE +
+MOBILE PAGE*/
 
 #no-padding {
   padding: 0;
@@ -263,7 +264,8 @@ img {
 }
 
 #apple-vision-pro>p,
-#moonwalkers>p {
+#moonwalkers>p,
+#iphone>p {
   color: #666;
   padding-left: 15px;
 }
@@ -302,7 +304,8 @@ img {
 
 #apple-content,
 #AI-content,
-#moonwalkers-content {
+#moonwalkers-content,
+#iphone-content {
   background: #f9f9f9;
   border-radius: 8px;
   padding: 10px;
@@ -311,7 +314,8 @@ img {
 
 #apple-content p,
 #AI-content p,
-#moonwalkers-content p {
+#moonwalkers-content p,
+#iphone-content p {
   padding: 5px;
   line-height: 1.5;
   color: #333;
@@ -330,7 +334,6 @@ img {
   font-weight: bold;
 }
 
-
 #moonwalkers img {
   border-radius: 0;
   height: 60vh;
@@ -339,11 +342,33 @@ img {
 
 
 
-/* mobile */
+/* MOBILE PAGE EXTRA CODE */
 
-.iphone img {
-  height: 40vh;
+#mobile {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+#mobile #iphone {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#mobile p {
+  text-align: start;
+}
+
+.camera,
+.screen-size,
+.battery-life {
+  font-size: 18px;
+  margin-right: 30px;
+}
+
 
 
 @media screen and (min-width: 500px) {
@@ -638,8 +663,6 @@ img {
   }
 
   /*Entertaiment*/
-
-
   .content {
     max-width: 100%;
   }
@@ -675,7 +698,8 @@ img {
   }
 
   #apple-content,
-  #AI-content {
+  #AI-content,
+  #moonwalkers-content {
     grid-row: 2/-1;
     max-width: 1200px;
   }
@@ -692,10 +716,4 @@ img {
     min-width: 100px;
   }
 
-  #moonwalkers-content {
-    grid-row: 2/-1;
-    max-width: 1200px;
-
-
-  }
 }
