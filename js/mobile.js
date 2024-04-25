@@ -29,8 +29,8 @@ function showSlidesIphone(n) {
 }
 
 function setColor(color) {
-    console.log('Color selected:', color);
     let slides = document.querySelectorAll("#iphone .mySlides");
+    let colorNameElement = document.querySelector("#color-name");
 
     let colorRanges = {
         'black': [1, 3],
@@ -38,6 +38,17 @@ function setColor(color) {
         'natural': [7, 9],
         'white': [10, 12],
     };
+
+    let colorTexts = {
+        'black': 'Black Titanium',
+        'blue': 'Blue Titanium',
+        'natural': 'Natural Titanium',
+        'white': 'White Titanium',
+    };
+
+    if (colorNameElement) {
+        colorNameElement.textContent = `Colour: ${colorTexts[color]}`;
+    }
 
     slides.forEach(slide => {
         slide.style.display = "none";
@@ -52,4 +63,72 @@ function setColor(color) {
     }
 
     showSlidesIphone(slideIndexIphone);
+}
+
+
+let slideIndexSamsung = 1;
+let colorRangeSamsung = [1, 3];
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlidesSamsung(slideIndexSamsung);
+
+    document.querySelector('#samsung .prev').addEventListener('click', () => {
+        plusSlidesSamsung(-1);
+    });
+    document.querySelector('#samsung .next').addEventListener('click', () => {
+        plusSlidesSamsung(1);
+    });
+});
+
+function plusSlidesSamsung(n) {
+    showSlidesSamsung(slideIndexSamsung += n);
+}
+
+function showSlidesSamsung(n) {
+    let slides = document.querySelectorAll("#samsung .mySlides");
+    if (n > colorRangeSamsung[1]) { slideIndexSamsung = colorRangeSamsung[0]; }
+    else if (n < colorRangeSamsung[0]) { slideIndexSamsung = colorRangeSamsung[1]; }
+
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    slides[slideIndexSamsung - 1].style.display = "block";
+}
+
+function setColorSamsung(color) {
+    let slides = document.querySelectorAll("#samsung .mySlides");
+    let colorNameElement = document.querySelector("#color-name-samsung");
+
+    let colorRangesSamsung = {
+        'black': [1, 3],
+        'grey': [4, 6],
+        'violet': [7, 9],
+        'yellow': [10, 12],
+    };
+
+    let colorTextsSamsung = {
+        'black': 'Black Titanium',
+        'grey': 'Grey Titanium',
+        'violet': 'Violet Titanium',
+        'yellow': 'Yellow Titanium',
+    };
+
+    if (colorNameElement) {
+        colorNameElement.textContent = `Colour: ${colorTextsSamsung[color]}`;
+    }
+
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    colorRangeSamsung = colorRangesSamsung[color];
+
+    slideIndexSamsung = colorRangeSamsung[0];
+
+    for (let i = colorRangeSamsung[0]; i <= colorRangeSamsung[1]; i++) {
+        slides[i - 1].style.display = "block";
+    }
+
+    showSlidesSamsung(slideIndexSamsung);
 }

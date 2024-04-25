@@ -265,7 +265,8 @@ MOBILE PAGE*/
 
 #apple-vision-pro>p,
 #moonwalkers>p,
-#iphone>p {
+#iphone>p,
+#samsung>p {
   color: #666;
   padding-left: 15px;
 }
@@ -305,7 +306,8 @@ MOBILE PAGE*/
 #apple-content,
 #AI-content,
 #moonwalkers-content,
-#iphone-content {
+#iphone-content,
+#samsung-content {
   background: #f9f9f9;
   border-radius: 8px;
   padding: 10px;
@@ -315,7 +317,8 @@ MOBILE PAGE*/
 #apple-content p,
 #AI-content p,
 #moonwalkers-content p,
-#iphone-content p {
+#iphone-content p,
+#samsung p {
   padding: 5px;
   line-height: 1.5;
   color: #333;
@@ -352,7 +355,8 @@ MOBILE PAGE*/
   flex-direction: column;
 }
 
-#mobile #iphone {
+#mobile #iphone,
+#mobile #samsung {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -369,20 +373,24 @@ MOBILE PAGE*/
   margin-right: 30px;
 }
 
-.color-options p {
+.color-options p,
+.color-options-samsung p {
+  display: flex;
+  flex-direction: row;
   text-align: left;
   margin-bottom: 5px;
 }
 
-.color-choices {
+.color-choices,
+.color-choices-samsung {
   display: flex;
   align-items: center;
   justify-content: start;
 }
 
 .color-circle {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: 1px solid #000;
   cursor: pointer;
@@ -394,7 +402,8 @@ MOBILE PAGE*/
 
 }
 
-#black-titanium {
+#black-titanium,
+#titanium-black {
   background-color: black;
 }
 
@@ -402,7 +411,8 @@ MOBILE PAGE*/
   background-color: blue;
 }
 
-#natural-titanium {
+#natural-titanium,
+#titanium-grey {
   background-color: gray;
 }
 
@@ -410,11 +420,21 @@ MOBILE PAGE*/
   background-color: white;
 }
 
-.slideshow-container {
-  background-color: none;
+#titanium-violet {
+  background-color: blueviolet;
 }
 
+#titanium-yellow {
+  background-color: yellow;
+}
 
+#samsung {
+  margin-top: 50px;
+}
+
+#samsung img {
+  width: 70%;
+}
 
 @media screen and (min-width: 500px) {
   body {
