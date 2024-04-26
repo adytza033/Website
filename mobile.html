@@ -29,7 +29,7 @@
 
   <main id="mobile">
 
-    <h1> You looking for some good mobiles?</h1>
+    <h1> You looking for some good smartphones?</h1>
     <h1> Here are some options for you!</h1>
 
     <section id="iphone">
@@ -90,8 +90,10 @@
       </div>
 
       <div class="color-options">
-        <p id="color-name">Colour: Black Titanium</p>
-        <p>Price: £1,999</p>
+        <div class="color-and-price">
+          <p id="color-name" class="color-text">Colour: Black Titanium</p>
+          <p class="price">Price: £1,199</p>
+        </div>
         <div class="color-choices">
           <span id="black-titanium" class="color-circle" onclick="setColor('black')"></span>
           <span id="blue-titanium" class="color-circle" onclick="setColor('blue')"></span>
@@ -182,14 +184,17 @@
       </h2>
 
       <div id="samsung-specifications">
-        <span class="camera"><i class="fa fa-camera"></i> 48.0 mp</span>
-        <span class="screen-size"><i class="fa fa-mobile-alt"></i> 6.7"</span>
-        <span class="battery-life"><i class="fa fa-battery-half"></i> 29 hours</span>
+        <span class="camera"><i class="fa fa-camera"></i> 200.0 mp</span>
+        <span class="screen-size"><i class="fa fa-mobile-alt"></i> 6.8"</span>
+        <span class="battery-life"><i class="fa fa-battery-half"></i> 30 hours</span>
       </div>
 
+
       <div class="color-options-samsung">
-        <p id="color-name-samsung">Colour: Black Titanium</p>
-        <p>Price: £1,999</p>
+        <div class="color-and-price">
+          <p id="color-name-samsung">Colour: Black Titanium</p>
+          <p class="price">Price: £1,249</p>
+        </div>
         <div class="color-choices-samsung">
           <span id="titanium-black" class="color-circle" onclick="setColorSamsung('black')"></span>
           <span id="titanium-grey" class="color-circle" onclick="setColorSamsung('grey')"></span>
@@ -200,31 +205,49 @@
 
       <div id="samsung-content">
         <p>
-          The most recent flagship smartphone from Apple, the iPhone 15 Pro Max, has state-of-the-art features and
-          specs. Its gorgeous 6.7-inch display, which has a curved edge and a sleek design, makes for an immersive
-          viewing experience and is ideal for gaming and multimedia consumption. The A17 Bionic, the newest and most
-          potent chip from Apple, powers the gadget and offers fluid multitasking and blazingly quick speed.
+          The tech giant's most recent flagship smartphone, the Samsung Galaxy S24 Ultra, was introduced in February
+          2024. Adding to the success of the S23 Ultra, this new model has an even more remarkable camera setup with a
+          200MP primary sensor that can record 8K video and take amazingly clear pictures. The display is a stunning
+          6.8-inch AMOLED that supports HDR10+ and has a buttery smooth refresh rate of 120 Hz. Under the hood, the 16GB
+          RAM and Snapdragon 8 Gen 3 processor deliver lightning-fast performance for demanding apps, gaming, and
+          multitasking.
         </p>
 
         <p>
-          The sophisticated camera system of the iPhone 15 Pro Max is one of its most notable features. Its 48-megapixel
-          primary camera produces extraordinarily vivid and detailed pictures. Additionally, the camera has
-          sophisticated computational photography features like enhanced low-light performance and sophisticated video
-          recording modes. Furthermore, the gadget has an amazing battery life of up to 29 hours, so you can be
-          productive and connected all day long without having to worry about running out of power.
+          The S24 Ultra's 5,000mAh battery, which even heavy users can expect to get over two days of use out of on a
+          single charge, is one of its most notable characteristics. With an IP69 dust/water resistant rating and a new
+          shatterproof "Diamondium" display coating, Samsung has further increased its commitment to durability. The
+          £1,249 Galaxy S24 Ultra is a costly device, but it is designed to be the ultimate Android flagship experience.
+          It does this by fusing state-of-the-art hardware with Samsung's refined One UI 6.0 software, a variety of
+          productivity-boosting styluses, and DeX desktop features.
         </p>
 
-        <p>This Iphone can be bought from the apple original website here
-          <a class="link" href="https://www.apple.com/uk/shop/buy-iphone/iphone-15-pro">Apple website</a>
+        <p>This Samsung can be bought from the Samsung original website here
+          <a class="link" href="https://www.samsung.com/uk/smartphones/galaxy-s24-ultra/buy/">Samsung website</a>
         </p>
       </div>
 
     </section>
 
 
+    <section id="api">
+      <h1>Here you can search for different devices</h1>
+      <p>Use the search bar below to find all the models made by a brand.</p>
+    </section>
+
+
+    <section id="search-section">
+      <input type="text" id="search-query" placeholder="Enter smartphone model...">
+      <button id="search-button">Search</button>
+    </section>
+
+    <section id="search-results"></section>
+
   </main>
   <script src="js/scripts.js"></script>
   <script src="js/mobile.js"></script>
+
+
 </body>
 
 

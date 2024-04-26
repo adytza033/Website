@@ -132,3 +132,59 @@ function setColorSamsung(color) {
 
     showSlidesSamsung(slideIndexSamsung);
 }
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const searchButton = document.getElementById('search-button');
+    const searchQuery = document.getElementById('search-query');
+
+    searchButton.addEventListener('click', function () {
+        const modelName = searchQuery.value.trim();
+        if (modelName) {
+            fetchModels(modelName);
+        } else {
+            console.error('Model name is empty');
+        }
+    });
+});
+
+function fetchModels(modelName) {
+    const xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                try {
+                    const response = JSON.parse(xhr.responseText);
+                    displayModels(response);
+                } catch (e) {
+                    console.error('Error parsing JSON:', e);
+                }
+            } else {
+                console.error('API request failed:', xhr.status, xhr.statusText);
+            }
+        }
+    };
+
+    xhr.open('GET', `https://mobile-phone-specs-database.p.rapidapi.com/gsm/get-models-by-brandname/${encodeURIComponent(modelName)}`);
+    xhr.setRequestHeader('X-RapidAPI-Key', 'ac9bfb50f8msh55da9e5117f4944p128a52jsn4f9d79adf57b');
+    xhr.setRequestHeader('X-RapidAPI-Host', 'mobile-phone-specs-database.p.rapidapi.com');
+    xhr.send();
+}
+
+function displayModels(data) {
+    const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = ''; // Clear previous results
+
+    const list = document.createElement('ul');
+    data.forEach(function (item) {
+        const listItem = document.createElement('li');
+        listItem.textContent = item.modelValue; // Use the appropriate property name from your API response
+        list.appendChild(listItem);
+    });
+
+    resultsContainer.appendChild(list);
+}

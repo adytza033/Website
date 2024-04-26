@@ -347,6 +347,10 @@ MOBILE PAGE*/
 
 /* MOBILE PAGE EXTRA CODE */
 
+#mobile h1 {
+  margin-bottom: 10px;
+}
+
 #mobile {
   display: flex;
   align-items: center;
@@ -373,10 +377,24 @@ MOBILE PAGE*/
   margin-right: 30px;
 }
 
-.color-options p,
-.color-options-samsung p {
+.color-options {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.color-and-price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-and-price .price {
+  margin-right: 10%;
+  font-weight: bold;
+}
+
+.price .color-options p,
+.color-options-samsung p {
   text-align: left;
   margin-bottom: 5px;
 }
@@ -435,6 +453,54 @@ MOBILE PAGE*/
 #samsung img {
   width: 70%;
 }
+
+
+/*   API      */
+
+#api {
+
+  margin-top: 40px;
+  text-align: center;
+}
+
+#search-section {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  padding: 0 20px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#search-query,
+#search-button {
+  box-sizing: border-box;
+}
+
+#search-query {
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 40vh;
+}
+
+#search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
 
 @media screen and (min-width: 500px) {
   body {
@@ -550,6 +616,26 @@ MOBILE PAGE*/
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+
+  /* MOBILE PAGE */
+  #mobile img {
+    border-radius: 0;
+  }
+
+  #mobile #iphone {
+    align-items: center;
+  }
+
+  .color-and-price {
+    display: -webkit-inline-box;
+    gap: 100px;
+  }
+
+  #iphone .slideshow-container,
+  #samsung .slideshow-container {
+    width: 70%;
   }
 
 
