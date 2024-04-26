@@ -177,12 +177,12 @@ function fetchModels(modelName) {
 
 function displayModels(data) {
     const resultsContainer = document.getElementById('search-results');
-    resultsContainer.innerHTML = ''; // Clear previous results
+    resultsContainer.innerHTML = '';
 
     const list = document.createElement('ul');
     data.forEach(function (item) {
         const listItem = document.createElement('li');
-        listItem.textContent = item.modelValue; // Use the appropriate property name from your API response
+        listItem.textContent = item.modelValue;
         list.appendChild(listItem);
     });
 
