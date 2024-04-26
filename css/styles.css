@@ -391,10 +391,11 @@ MOBILE PAGE*/
 .color-and-price .price {
   margin-right: 10%;
   font-weight: bold;
+  color: black;
 }
 
 .price .color-options p,
-.color-options-samsung p {
+.price .color-options-samsung p {
   text-align: left;
   margin-bottom: 5px;
 }
@@ -624,7 +625,8 @@ MOBILE PAGE*/
     border-radius: 0;
   }
 
-  #mobile #iphone {
+  #mobile #iphone,
+  #mobile #samsung {
     align-items: center;
   }
 
@@ -638,7 +640,10 @@ MOBILE PAGE*/
     width: 70%;
   }
 
-
+  #iphone-content,
+  #samsung-content {
+    max-width: 800px;
+  }
 }
 
 
@@ -866,5 +871,40 @@ MOBILE PAGE*/
   #moonwalkers .slideshow-container {
     min-width: 100px;
   }
+
+
+
+  /* MOBILE PAGE */
+
+  #mobile #iphone,
+  #mobile #samsung {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  #about-iphone,
+  #about-samsung {
+    grid-column: 1/ -1;
+    grid-row: 1;
+  }
+
+  #iphone .slideshow-container,
+  #samsung .slideshow-container {
+    grid-row: 1/3;
+    min-width: 300px;
+    width: 100%;
+  }
+
+  #iphone-content,
+  #samsung-content {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  #samsung img {
+    width: 50%;
+  }
+
 
 }
